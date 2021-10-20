@@ -4,7 +4,6 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     snake.turn(Direction.Right, 90)
 })
-let snakeb: game.LedSprite = null
 let snake: game.LedSprite = null
 snake = game.createSprite(0, 2)
 let fruit = game.createSprite(randint(0, 4), randint(0, 4))
@@ -18,6 +17,5 @@ basic.forever(function () {
     if (snake.isTouching(fruit)) {
         fruit.set(LedSpriteProperty.X, randint(0, 4))
         fruit.set(LedSpriteProperty.Y, randint(0, 4))
-        snakeb = game.createSprite(2, 2)
     }
 })
